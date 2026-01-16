@@ -25,16 +25,16 @@ export default function LoginForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       {/* Email */}
       <div>
-        <label className="text-secondary font-semibold text-2xl">Email</label>
+        <label className="text-secondary font-semibold text-xl">Email</label>
 
-        <div className="relative mt-4">
+        <div className="relative mt-3">
           <MdOutlineMailOutline className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl" />
 
           <input
             type="email"
             placeholder="Enter your email"
             {...register("email")}
-            className="w-full pl-12 pr-4 py-4 border rounded-md 
+            className="w-full pl-12 pr-4 py-3 border rounded-md 
                        focus:ring-2 focus:ring-primary outline-none"
           />
         </div>
@@ -46,18 +46,16 @@ export default function LoginForm() {
 
       {/* Password */}
       <div>
-        <label className="text-secondary font-semibold text-2xl">
-          Password
-        </label>
+        <label className="text-secondary font-semibold text-xl">Password</label>
 
-        <div className="relative mt-4">
+        <div className="relative mt-3">
           <TbLockPassword className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl" />
 
           <input
             type="password"
             placeholder="Enter your password"
             {...register("password")}
-            className="w-full pl-12 pr-4 py-4 border rounded-md 
+            className="w-full pl-12 pr-4 py-3 border rounded-md 
                        focus:ring-2 focus:ring-primary outline-none"
           />
           {/* Eye icon */}
@@ -81,7 +79,7 @@ export default function LoginForm() {
 
       {/* Forgot password */}
       <div className="flex justify-end">
-        <p className="text-primary font-medium text-2xl cursor-pointer">
+        <p className="text-primary font-medium text-xl cursor-pointer">
           Forgot password?
         </p>
       </div>
@@ -90,7 +88,7 @@ export default function LoginForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-primary text-white py-4 rounded-md 
+        className="w-full bg-primary text-white py-3 rounded-md 
                    hover:bg-primary-600 transition disabled:opacity-60"
       >
         {isSubmitting ? "Signing in..." : "Sign in"}
