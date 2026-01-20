@@ -74,9 +74,7 @@ export default function RegisterForm() {
         {role === "doctor" && (
           <>
             <div>
-              <label className="text-secondary font-semibold">
-                Specialization
-              </label>
+              <label className="text-secondary font-semibold">Specialization</label>
               <input
                 type="text"
                 placeholder="e.g. Cardiologist"
@@ -85,9 +83,7 @@ export default function RegisterForm() {
             </div>
 
             <div>
-              <label className="text-secondary font-semibold">
-                Medical license number
-              </label>
+              <label className="text-secondary font-semibold">Medical license number</label>
               <input
                 type="text"
                 placeholder="Enter your license number"
@@ -96,9 +92,7 @@ export default function RegisterForm() {
             </div>
 
             <div>
-              <label className="text-secondary font-semibold ">
-                Years of experience
-              </label>
+              <label className="text-secondary font-semibold ">Years of experience</label>
               <input
                 type="number"
                 placeholder="e.g. 5"

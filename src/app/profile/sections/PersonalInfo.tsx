@@ -3,20 +3,14 @@ import { InfoItem } from "../Components/InfoItem";
 export default function PersonalInfo() {
   return (
     <div className="bg-white rounded-2xl shadow-sm p-6 space-y-6">
-      <h2 className="text-xl font-semibold text-secondary">
-        Personal Information
-      </h2>
+      <h2 className="text-xl font-semibold text-secondary">Personal Information</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <InfoItem label="Full Name" value="Mariam Ahmed" />
         <InfoItem label="Date of Birth" value="1 May 2003" />
         <InfoItem label="Gender" value="Female" />
         <InfoItem label="Phone" value="+20 109 456 7890" />
-        <InfoItem
-          label="Address"
-          value="Nasr City, Alex, Egypt"
-          className="md:col-span-2"
-        />
+        <InfoItem label="Address" value="Nasr City, Alex, Egypt" className="md:col-span-2" />
       </div>
 
       <button

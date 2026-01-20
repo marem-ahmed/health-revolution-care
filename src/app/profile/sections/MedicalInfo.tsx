@@ -8,10 +8,7 @@ export default function MedicalInfo() {
         <MedicalItem label="Blood Type" value="O+" />
         <MedicalItem label="Allergies" value="Penicillin, Dust" />
         <MedicalItem label="Chronic Diseases" value="None" />
-        <MedicalItem
-          label="Current Medications"
-          value="Vitamin D supplements"
-        />
+        <MedicalItem label="Current Medications" value="Vitamin D supplements" />
         <MedicalItem label="Height" value="175 cm" />
         <MedicalItem label="Weight" value="78 kg" />
       </div>

@@ -5,9 +5,7 @@ export default function MedicalRecords() {
     <div className="bg-white rounded-2xl shadow p-6 space-y-6">
       {/* Header */}
       <div>
-        <h2 className="text-2xl font-semibold text-secondary">
-          Medical Records
-        </h2>
+        <h2 className="text-2xl font-semibold text-secondary">Medical Records</h2>
         <p className="text-sm text-gray-500 mt-1">
           Upload and manage your medical documents securely
         </p>
@@ -17,9 +15,7 @@ export default function MedicalRecords() {
       <div className="border-2 border-dashed rounded-xl p-6 flex items-center justify-between bg-primary-50">
         <div>
           <h3 className="font-medium text-gray-800">Upload New Record</h3>
-          <p className="text-sm text-gray-500 mt-1">
-            Upload your medical documents securely
-          </p>
+          <p className="text-sm text-gray-500 mt-1">Upload your medical documents securely</p>
         </div>
 
         <button className="bg-primary text-white px-6 py-2 rounded-lg hover:opacity-90 transition">

@@ -39,9 +39,7 @@ export default function LoginForm() {
           />
         </div>
 
-        {errors.email && (
-          <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
-        )}
+        {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
       </div>
 
       {/* Password */}
@@ -64,24 +62,16 @@ export default function LoginForm() {
             onClick={() => setShowPassword((prev) => !prev)}
             className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-primary"
           >
-            {showPassword ? (
-              <AiOutlineEyeInvisible size={22} />
-            ) : (
-              <AiOutlineEye size={22} />
-            )}
+            {showPassword ? <AiOutlineEyeInvisible size={22} /> : <AiOutlineEye size={22} />}
           </button>
         </div>
 
-        {errors.password && (
-          <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>
-        )}
+        {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>}
       </div>
 
       {/* Forgot password */}
       <div className="flex justify-end">
-        <p className="text-primary font-medium text-xl cursor-pointer">
-          Forgot password?
-        </p>
+        <p className="text-primary font-medium text-xl cursor-pointer">Forgot password?</p>
       </div>
 
       {/* Submit */}

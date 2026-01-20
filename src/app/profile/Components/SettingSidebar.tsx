@@ -8,7 +8,7 @@ const links = [
   { label: "Medical Info", to: "/profile/medical", icon: MdMedicalInformation },
   {
     label: "Medical Record",
-    to: "/profile/medicalrecord",
+    to: "/profile/medical-records",
     icon: LiaBookMedicalSolid,
   },
   { label: "Change Password", to: "/profile/password", icon: FiLock },

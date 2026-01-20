@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
+import DarkModeToggle from "../components/DarkmodeToggle";
 
 export default function Navbar() {
   return (
     <header className="bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <img src="/assets/logo.png" className="h-8" />
-          <span className="font-bold text-secondary text-lg">
-            HealthConnect
-          </span>
+          <span className="font-bold text-secondary text-lg">HealthConnect</span>
         </div>
 
         {/* Right */}
@@ -29,6 +28,7 @@ export default function Navbar() {
           >
             M
           </Link>
+          <DarkModeToggle />
         </div>
       </div>
     </header>

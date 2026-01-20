@@ -29,11 +29,7 @@ export function NotificationItem({
         <p className="text-sm text-gray-500 mt-1">{description}</p>
       </div>
 
-      <input
-        type="checkbox"
-        defaultChecked={defaultChecked}
-        className="h-5 w-5 accent-primary"
-      />
+      <input type="checkbox" defaultChecked={defaultChecked} className="h-5 w-5 accent-primary" />
     </label>
   );
 }

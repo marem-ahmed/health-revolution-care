@@ -6,14 +6,7 @@ type RecordItemProps = {
   image: string;
   shared?: string;
 };
-export function RecordItem({
-  title,
-  category,
-  date,
-  file,
-  shared,
-  image,
-}: RecordItemProps) {
+export function RecordItem({ title, category, date, file, shared, image }: RecordItemProps) {
   return (
     <div className="flex items-center justify-between p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition">
       {/* Left */}

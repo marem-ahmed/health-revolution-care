@@ -4,11 +4,7 @@ type SecurityItemProps = {
   action: string;
 };
 
-export function SecurityItem({
-  title,
-  description,
-  action,
-}: SecurityItemProps) {
+export function SecurityItem({ title, description, action }: SecurityItemProps) {
   return (
     <div
       className="
