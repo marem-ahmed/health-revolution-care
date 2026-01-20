@@ -45,9 +45,7 @@ export default function ChatBot({ onClose }: ChatBotProps) {
             focus:ring-2 focus:ring-primary
           "
         />
-        <button className="bg-primary text-white px-4 rounded-full">
-          Send
-        </button>
+        <button className="bg-primary text-white px-4 rounded-full">Send</button>
       </div>
     </div>
   );
