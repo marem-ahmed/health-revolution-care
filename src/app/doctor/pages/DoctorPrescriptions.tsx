@@ -1,16 +1,12 @@
 export default function DoctorPrescriptions() {
   return (
     <div className="bg-white rounded-2xl shadow p-6 max-w-xl">
-      <h2 className="text-xl font-bold text-secondary mb-6">
-        Create Prescription
-      </h2>
+      <h2 className="text-xl font-bold text-secondary mb-6">Create Prescription</h2>
 
       <form className="flex flex-col gap-5">
         {/* Patient Name */}
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-secondary">
-            Patient Name
-          </label>
+          <label className="text-sm font-medium text-secondary">Patient Name</label>
           <input
             type="text"
             placeholder="Enter patient name"
@@ -21,9 +17,7 @@ export default function DoctorPrescriptions() {
 
         {/* Medication */}
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-secondary">
-            Medication
-          </label>
+          <label className="text-sm font-medium text-secondary">Medication</label>
           <input
             type="text"
             placeholder="e.g. Atorvastatin"
@@ -45,9 +39,7 @@ export default function DoctorPrescriptions() {
 
         {/* Instructions */}
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-secondary">
-            Instructions
-          </label>
+          <label className="text-sm font-medium text-secondary">Instructions</label>
           <textarea
             placeholder="Additional instructions"
             className="w-full px-4 py-3 border rounded-lg outline-none

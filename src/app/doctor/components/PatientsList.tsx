@@ -15,10 +15,7 @@ export default function PatientsList() {
 
       <div className="space-y-3">
         {patients.map((p) => (
-          <div
-            key={p.name}
-            className="flex items-center justify-between bg-gray-50 rounded-lg p-3"
-          >
+          <div key={p.name} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
             <div>
               <p className="font-medium">{p.name}</p>
               <p className="text-xs text-gray-500">

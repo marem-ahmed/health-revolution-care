@@ -48,11 +48,7 @@ export default function UpcomingAppointments() {
             <span>{a.patient}</span>
             <span>{a.time}</span>
             <span className="truncate">{a.reason}</span>
-            <span
-              className={`text-xs px-2 py-1 rounded-full text-center ${
-                statusStyle[a.status]
-              }`}
-            >
+            <span className={`text-xs px-2 py-1 rounded-full text-center ${statusStyle[a.status]}`}>
               {a.status}
             </span>
           </div>

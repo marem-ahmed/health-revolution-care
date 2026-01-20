@@ -110,11 +110,7 @@ export default function DoctorAppointments() {
               <td>{a.time}</td>
               <td>{a.reason}</td>
               <td>
-                <span
-                  className={`px-3 py-1 rounded-full text-xs ${
-                    statusClasses[a.status]
-                  }`}
-                >
+                <span className={`px-3 py-1 rounded-full text-xs ${statusClasses[a.status]}`}>
                   {a.status}
                 </span>
               </td>

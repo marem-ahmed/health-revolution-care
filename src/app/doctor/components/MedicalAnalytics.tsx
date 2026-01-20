@@ -1,11 +1,4 @@
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 const data = [
   { day: "Apr 1", patients: 120 },
@@ -52,9 +45,7 @@ export default function MedicalAnalytics() {
         </div>
       </div>
 
-      <button className="w-full bg-primary text-white py-3 rounded-lg">
-        View Details
-      </button>
+      <button className="w-full bg-primary text-white py-3 rounded-lg">View Details</button>
     </div>
   );
 }
