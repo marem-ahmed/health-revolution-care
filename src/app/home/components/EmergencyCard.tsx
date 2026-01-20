@@ -6,9 +6,7 @@ export default function EmergencyCard() {
         <p className="text-primary-50">Immediate medical assistance</p>
       </div>
 
-      <button className="bg-white text-primary font-bold px-6 py-3 rounded-lg">
-        911
-      </button>
+      <button className="bg-white text-primary font-bold px-6 py-3 rounded-lg">911</button>
     </div>
   );
 }
