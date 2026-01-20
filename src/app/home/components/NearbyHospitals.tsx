@@ -47,12 +47,8 @@ export default function NearbyHospitals() {
     <section className="space-y-4">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-secondary">
-          Find Nearby Hospitals
-        </h2>
-        <button className="text-primary font-medium hover:underline">
-          View all
-        </button>
+        <h2 className="text-2xl font-bold text-secondary">Find Nearby Hospitals</h2>
+        <button className="text-primary font-medium hover:underline">View all</button>
       </div>
 
       {/* Map */}
@@ -76,9 +72,7 @@ export default function NearbyHospitals() {
           >
             {/* Left */}
             <div>
-              <h3 className="text-lg font-semibold text-secondary">
-                {hospital.name}
-              </h3>
+              <h3 className="text-lg font-semibold text-secondary">{hospital.name}</h3>
               <p className="text-sm text-accent mt-1">
                 ⭐ {hospital.rating} ({hospital.reviews} reviews)
               </p>
@@ -87,9 +81,7 @@ export default function NearbyHospitals() {
             {/* Right */}
             <div className="text-right">
               <p className="text-sm text-accent">{hospital.distance}</p>
-              <p className="text-primary font-semibold mt-1">
-                {hospital.price}
-              </p>
+              <p className="text-primary font-semibold mt-1">{hospital.price}</p>
             </div>
           </motion.div>
         ))}
