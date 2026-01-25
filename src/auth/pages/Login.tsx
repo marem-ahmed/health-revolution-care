@@ -11,7 +11,7 @@ export default function Login() {
   return (
     <>
       <div className="flex justify-center mb-4">
-        <img src="../../public/assets/logo.png" alt="Health Connect" className="size-40" />
+        <img src="/assets/logo.png" alt="Health Connect" className="size-40" />
       </div>
 
       <h1 className="text-2xl font-bold text-center mb-6 text-primary">Sign in to your account</h1>
