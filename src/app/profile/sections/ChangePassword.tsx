@@ -8,13 +8,14 @@ export default function ChangePassword() {
           type="password"
           placeholder="Current password"
           className="
-            w-full
-            rounded-lg
-            border border-gray-300
-            px-4 py-3
-            text-sm
+            w-full rounded-lg
+            border border-gray-300 dark:border-slate-700
+            bg-white dark:bg-slate-900
+            px-4 py-3 text-sm
+            text-secondary dark:text-slate-100
+            placeholder:text-gray-400 dark:placeholder:text-slate-400
             focus:outline-none
-            focus:ring-2 focus:ring-primary
+            focus:ring-2 focus:ring-primary/50
             focus:border-primary
             transition
           "
@@ -24,13 +25,14 @@ export default function ChangePassword() {
           type="password"
           placeholder="New password"
           className="
-            w-full
-            rounded-lg
-            border border-gray-300
-            px-4 py-3
-            text-sm
+            w-full rounded-lg
+            border border-gray-300 dark:border-slate-700
+            bg-white dark:bg-slate-900
+            px-4 py-3 text-sm
+            text-secondary dark:text-slate-100
+            placeholder:text-gray-400 dark:placeholder:text-slate-400
             focus:outline-none
-            focus:ring-2 focus:ring-primary
+            focus:ring-2 focus:ring-primary/50
             focus:border-primary
             transition
           "
@@ -40,13 +42,14 @@ export default function ChangePassword() {
           type="password"
           placeholder="Confirm new password"
           className="
-            w-full
-            rounded-lg
-            border border-gray-300
-            px-4 py-3
-            text-sm
+            w-full rounded-lg
+            border border-gray-300 dark:border-slate-700
+            bg-white dark:bg-slate-900
+            px-4 py-3 text-sm
+            text-secondary dark:text-slate-100
+            placeholder:text-gray-400 dark:placeholder:text-slate-400
             focus:outline-none
-            focus:ring-2 focus:ring-primary
+            focus:ring-2 focus:ring-primary/50
             focus:border-primary
             transition
           "
@@ -54,12 +57,8 @@ export default function ChangePassword() {
 
         <button
           className="
-            w-full
-            bg-primary
-            text-white
-            py-3
-            rounded-lg
-            font-medium
+            w-full bg-primary text-white
+            py-3 rounded-lg font-medium
             hover:opacity-90
             active:scale-[0.98]
             transition
