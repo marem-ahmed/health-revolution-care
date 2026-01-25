@@ -1,42 +1,77 @@
-interface Props {
-  doctor: string;
-  specialty: string;
-  date: string;
-  time: string;
-  status: "Confirmed" | "Completed" | "Cancelled";
-  image: string;
-}
+import AppointmentCard from "../components/AppointmentCard";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
-const statusStyles = {
-  Confirmed: "bg-blue-100 text-blue-600",
-  Completed: "bg-green-100 text-green-600",
-  Cancelled: "bg-red-100 text-red-600",
-};
+export default function MyAppointments() {
+  const navigate = useNavigate();
 
-export default function AppointmentCard({ doctor, specialty, date, time, status, image }: Props) {
+  const appointments = [
+    {
+      doctor: "Dr. mina Johnson",
+      specialty: "Cardiologist",
+      date: "April 18, 2024",
+      time: "09:30 AM",
+      status: "Confirmed" as const,
+    },
+    {
+      doctor: "Dr. Ahmed Hassan",
+      specialty: "Dermatologist",
+      date: "March 02, 2024",
+      time: "01:00 PM",
+      status: "Completed" as const,
+    },
+    {
+      doctor: "Dr. mohamed Omar",
+      specialty: "Neurologist",
+      date: "Feb 14, 2024",
+      time: "11:00 AM",
+      status: "Cancelled" as const,
+    },
+  ];
+
   return (
-    <div className="bg-white p-5 rounded-2xl shadow-sm flex items-center justify-between hover:shadow-md transition">
-      <div className="flex items-center gap-4">
-        {/* Doctor Image */}
-        <img src={image} alt={doctor} className="w-14 h-14 rounded-full object-cover" />
+    <div className="max-w-6xl mx-auto px-6 py-10 space-y-8">
+      {/* Back Button */}
+      <button
+        onClick={() => navigate("/")}
+        className="
+          flex items-center gap-2
+          text-sm font-medium
+          text-secondary dark:text-slate-300
+          hover:underline
+        "
+      >
+        <ArrowLeft className="w-4 h-4" />
+        Back to Home
+      </button>
 
-        <div>
-          <h4 className="font-semibold">{doctor}</h4>
-          <p className="text-sm text-gray-500">{specialty}</p>
-          <p className="text-sm text-gray-500">
-            {date} • {time}
-          </p>
-        </div>
+      {/* Header */}
+      <div>
+        <h1 className="text-2xl font-bold text-secondary dark:text-slate-100">My Appointments</h1>
+        <p className="text-accent dark:text-slate-400 mt-1">
+          View and manage all your appointments
+        </p>
       </div>
 
-      <div className="flex items-center gap-4">
-        <span className={`px-3 py-1 rounded-full text-sm font-medium ${statusStyles[status]}`}>
-          {status}
-        </span>
+      {/* Filters (UI only) */}
+      <div className="flex gap-3 text-sm">
+        <button className="px-4 py-2 rounded-full bg-primary text-white">All</button>
+        <button className="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 dark:text-slate-200">
+          Upcoming
+        </button>
+        <button className="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 dark:text-slate-200">
+          Completed
+        </button>
+        <button className="px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 dark:text-slate-200">
+          Cancelled
+        </button>
+      </div>
 
-        {status === "Confirmed" && (
-          <button className="text-sm text-red-500 hover:underline">Cancel</button>
-        )}
+      {/* Appointments List */}
+      <div className="space-y-4">
+        {appointments.map((appointment, index) => (
+          <AppointmentCard key={index} {...appointment} />
+        ))}
       </div>
     </div>
   );
