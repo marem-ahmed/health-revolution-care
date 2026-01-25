@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 /* Auth */
 import AuthLayout from "../auth/layout/AuthLayout";
@@ -25,28 +25,32 @@ import DoctorPatients from "../app/doctor/pages/DoctorPatients";
 import DoctorMessages from "../app/doctor/pages/DoctorMessages";
 import DoctorPrescriptions from "../app/doctor/pages/DoctorPrescriptions";
 import DoctorAppointments from "../app/doctor/pages/DoctorAppointement";
+
+/* Home pages */
 import BookAppointment from "../app/home/Pages/BookAppointment";
 import AppointmentConfirmation from "../app/home/Pages/AppointmentConfirmation";
 import OnlinePayment from "../app/home/Pages/OnlinePayment";
 import FindHospitals from "../app/home/Pages/FindHospitals";
 import MyAppointments from "../app/home/Pages/MyAppointments";
 import Doctors from "../app/home/Pages/Doctor";
-import EditProfile from "../app/profile/sections/EditProfile";
 import ViewAppointment from "../app/home/Pages/ViewAppointment";
+import EditProfile from "../app/profile/sections/EditProfile";
 
 export default function AppRoutes() {
   return (
     <Routes>
+      {/* Redirect root to login */}
+      <Route path="/" element={<Navigate to="/login" replace />} />
+
       {/* ========== Auth ========== */}
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Route>
 
-      {/* ========== App (with Navbar) ========== */}
+      {/* ========== App (Patient) ========== */}
       <Route element={<AppLayout />}>
-        {/* Home */}
-        <Route path="/" element={<PatientHome />} />
+        <Route path="/home" element={<PatientHome />} />
         <Route path="/home/view-appointment" element={<ViewAppointment />} />
         <Route path="/home/book-appointment" element={<BookAppointment />} />
         <Route path="/home/appointment-confirmation" element={<AppointmentConfirmation />} />

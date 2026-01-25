@@ -35,7 +35,7 @@ export default function LoginForm() {
     localStorage.setItem("role", user.role);
 
     // redirect based on role
-    navigate(user.role === "doctor" ? "/doctor" : "/");
+    navigate(user.role === "doctor" ? "/doctor" : "/home");
   };
 
   return (
