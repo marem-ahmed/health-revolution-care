@@ -17,7 +17,7 @@ export default function Register() {
 
       <RegisterForm />
 
-      <p className="text-lg font-semibold text-center mt-8 text-gray-500">
+      <p className="text-lg font-semibold text-center text-gray-500">
         Already have an account?
         <span onClick={handleNavigation} className="text-primary cursor-pointer">
           Sign in
