@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import EmergencyCard from "../components/EmergencyCard";
 import HospitalsMap from "../components/HospitalMap";
 import DoctorMiniCard from "../components/DoctorMiniCard";
+import { useNavigate } from "react-router-dom";
+
+import { Hand, Calendar, Pill, HeartPulse, Activity, Bell, Stethoscope } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 25 },
@@ -11,6 +14,22 @@ const fadeUp = {
 };
 
 export default function PatientHome() {
+  const navigate = useNavigate();
+
+  const todayStats = [
+    { title: "Today", desc: "No appointments scheduled", icon: Calendar },
+    { title: "Medications", desc: "2 active medications", icon: Pill },
+    { title: "Health Status", desc: "Stable & Good", icon: HeartPulse },
+    { title: "Next Visit", desc: "In 2 days", icon: Bell },
+  ];
+
+  const weeklyStats = [
+    { label: "Appointments", value: "2", icon: Calendar },
+    { label: "Doctors Visited", value: "1", icon: Stethoscope },
+    { label: "Prescriptions", value: "3", icon: Pill },
+    { label: "Medical Reports", value: "2", icon: Activity },
+  ];
+
   return (
     <div className="min-h-screen bg-primary-50 dark:bg-slate-900 transition-colors">
       <main className="mx-auto px-8 py-10 space-y-16">
@@ -23,12 +42,7 @@ export default function PatientHome() {
         >
           <h1 className="text-3xl font-bold text-secondary dark:text-slate-100 flex items-center gap-2">
             Hello, Mariam
-            <motion.span
-              animate={{ rotate: [0, 20, -10, 20, 0] }}
-              transition={{ duration: 1.2, repeat: Infinity, repeatDelay: 2 }}
-            >
-              👋
-            </motion.span>
+            <Hand className="w-6 h-6 text-primary" />
           </h1>
 
           <p className="text-accent dark:text-slate-400 max-w-xl">
@@ -37,10 +51,26 @@ export default function PatientHome() {
           </p>
 
           <div className="flex gap-4 pt-2">
-            <button className="bg-primary text-white px-6 py-2 rounded-xl hover:bg-primary-dark transition">
+            <button
+              onClick={() => navigate("/home/view-appointment")}
+              className="
+    bg-primary text-white
+    px-6 py-2 rounded-xl
+    hover:bg-primary-dark
+    active:scale-95
+    transition
+  "
+            >
               View Appointment
             </button>
-            <button className="border px-6 py-2 rounded-xl dark:border-slate-700 dark:text-slate-200">
+
+            <button
+              onClick={() => navigate("/profile/edit")}
+              className="border px-6 py-2 rounded-xl flex items-center gap-2
+                dark:border-slate-700 dark:text-slate-200
+                hover:bg-gray-50 dark:hover:bg-slate-800 transition"
+            >
+              <Activity className="w-4 h-4" />
               Update Profile
             </button>
           </div>
@@ -48,16 +78,12 @@ export default function PatientHome() {
 
         {/* TODAY STATUS */}
         <section className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {[
-            ["Today", "No appointments scheduled"],
-            ["Medications", "2 active medications"],
-            ["Health Status", "Stable & Good"],
-            ["Next Visit", "In 2 days"],
-          ].map(([title, desc]) => (
+          {todayStats.map(({ title, desc, icon: Icon }) => (
             <div
               key={title}
               className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm space-y-2"
             >
+              <Icon className="w-5 h-5 text-primary" />
               <p className="text-sm text-accent dark:text-slate-400">{title}</p>
               <p className="font-semibold dark:text-slate-100">{desc}</p>
             </div>
@@ -79,16 +105,12 @@ export default function PatientHome() {
               <h3 className="text-xl font-semibold dark:text-slate-100">Weekly Health Summary</h3>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                {[
-                  ["Appointments", "2"],
-                  ["Doctors Visited", "1"],
-                  ["Prescriptions", "3"],
-                  ["Medical Reports", "2"],
-                ].map(([label, value]) => (
+                {weeklyStats.map(({ label, value, icon: Icon }) => (
                   <div
                     key={label}
-                    className="bg-primary-50 dark:bg-slate-700 p-5 rounded-2xl space-y-1"
+                    className="bg-primary-50 dark:bg-slate-700 p-5 rounded-2xl space-y-2"
                   >
+                    <Icon className="w-6 h-6 mx-auto text-primary" />
                     <p className="text-sm text-accent dark:text-slate-400">{label}</p>
                     <p className="text-2xl font-bold dark:text-slate-100">{value}</p>
                   </div>
@@ -108,8 +130,7 @@ export default function PatientHome() {
               </div>
 
               <p className="text-sm text-accent dark:text-slate-400 max-w-xl">
-                Showing nearby hospitals based on your current location to help you find medical
-                care faster.
+                Showing nearby hospitals based on your current location.
               </p>
             </section>
 
@@ -118,10 +139,10 @@ export default function PatientHome() {
               <h3 className="text-xl font-semibold dark:text-slate-100">Recent Activity</h3>
 
               <ul className="space-y-3 text-sm text-accent dark:text-slate-400">
-                <li>✔ Appointment booked with Dr. Sarah Johnson</li>
-                <li>💊 Prescription updated by Dr. Ahmed</li>
-                <li>🧾 Medical record reviewed</li>
-                <li>📅 Follow-up scheduled next week</li>
+                <li>Appointment booked with Dr. Sarah Johnson</li>
+                <li>Prescription updated by Dr. Ahmed</li>
+                <li>Medical record reviewed</li>
+                <li>Follow-up scheduled next week</li>
               </ul>
             </section>
           </div>
@@ -133,10 +154,18 @@ export default function PatientHome() {
               <h3 className="text-xl font-semibold dark:text-slate-100">Health Tips</h3>
 
               <ul className="space-y-2 text-sm text-accent dark:text-slate-400">
-                <li>🥗 Maintain a balanced diet today</li>
-                <li>🚶‍♀️ Walk at least 30 minutes</li>
-                <li>😴 Aim for 7–8 hours of sleep</li>
-                <li>💧 Stay hydrated throughout the day</li>
+                <li className="flex items-center gap-2">
+                  <HeartPulse className="w-4 h-4 text-green-500" />
+                  Maintain a balanced diet today
+                </li>
+                <li className="flex items-center gap-2">
+                  <Activity className="w-4 h-4 text-blue-500" />
+                  Walk at least 30 minutes
+                </li>
+                <li className="flex items-center gap-2">
+                  <Bell className="w-4 h-4 text-purple-500" />
+                  Aim for 7–8 hours of sleep
+                </li>
               </ul>
             </section>
 
@@ -152,7 +181,7 @@ export default function PatientHome() {
               </div>
 
               <p className="text-sm text-accent dark:text-slate-400">
-                Doctors recommended based on your recent visits and medical history.
+                Doctors recommended based on your medical history.
               </p>
             </section>
 
