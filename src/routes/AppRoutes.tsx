@@ -25,6 +25,14 @@ import DoctorPatients from "../app/doctor/pages/DoctorPatients";
 import DoctorMessages from "../app/doctor/pages/DoctorMessages";
 import DoctorPrescriptions from "../app/doctor/pages/DoctorPrescriptions";
 import DoctorAppointments from "../app/doctor/pages/DoctorAppointement";
+import BookAppointment from "../app/home/Pages/BookAppointment";
+import AppointmentConfirmation from "../app/home/Pages/AppointmentConfirmation";
+import OnlinePayment from "../app/home/Pages/OnlinePayment";
+import FindHospitals from "../app/home/Pages/FindHospitals";
+import MyAppointments from "../app/home/Pages/MyAppointments";
+import Doctors from "../app/home/Pages/Doctor";
+import EditProfile from "../app/profile/sections/EditProfile";
+import ViewAppointment from "../app/home/Pages/ViewAppointment";
 
 export default function AppRoutes() {
   return (
@@ -39,14 +47,22 @@ export default function AppRoutes() {
       <Route element={<AppLayout />}>
         {/* Home */}
         <Route path="/" element={<PatientHome />} />
+        <Route path="/home/view-appointment" element={<ViewAppointment />} />
+        <Route path="/home/book-appointment" element={<BookAppointment />} />
+        <Route path="/home/appointment-confirmation" element={<AppointmentConfirmation />} />
+        <Route path="/home/online-payment" element={<OnlinePayment />} />
+        <Route path="/home/hospitals" element={<FindHospitals />} />
+        <Route path="/home/doctors" element={<Doctors />} />
+        <Route path="/home/my-appointments" element={<MyAppointments />} />
 
         {/* Profile */}
         <Route path="/profile" element={<ProfileLayout />}>
           <Route index element={<PersonalInfo />} />
           <Route path="medical" element={<MedicalInfo />} />
-          <Route path="medicalrecord" element={<MedicalRecords />} />
+          <Route path="medical-records" element={<MedicalRecords />} />
           <Route path="password" element={<ChangePassword />} />
           <Route path="notifications" element={<Notifications />} />
+          <Route path="edit" element={<EditProfile />} />
           <Route path="security" element={<PrivacySecurity />} />
         </Route>
 
