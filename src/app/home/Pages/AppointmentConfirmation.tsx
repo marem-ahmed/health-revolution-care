@@ -30,7 +30,7 @@ export default function AppointmentConfirmation() {
 
       <div className="flex gap-4">
         <button
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/home")}
           className="flex-1 border rounded-xl py-3 hover:bg-gray-50 transition"
         >
           Back to Home

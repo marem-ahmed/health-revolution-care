@@ -8,7 +8,7 @@ export default function ViewAppointment() {
     <div className="max-w-4xl mx-auto px-6 py-10 space-y-6">
       {/* Back */}
       <button
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/home")}
         className="text-sm text-secondary dark:text-slate-300 hover:underline"
       >
         ← Back to Home
