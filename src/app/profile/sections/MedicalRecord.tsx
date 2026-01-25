@@ -2,23 +2,48 @@ import { RecordItem } from "../Components/RecordItem";
 
 export default function MedicalRecords() {
   return (
-    <div className="bg-white rounded-2xl shadow p-6 space-y-6">
+    <div
+      className="
+        bg-white dark:bg-slate-800
+        rounded-2xl shadow-sm
+        p-6 space-y-6
+        transition-colors
+      "
+    >
       {/* Header */}
       <div>
-        <h2 className="text-2xl font-semibold text-secondary">Medical Records</h2>
-        <p className="text-sm text-gray-500 mt-1">
+        <h2 className="text-2xl font-semibold text-secondary dark:text-slate-100">
+          Medical Records
+        </h2>
+        <p className="text-sm text-gray-500 dark:text-slate-400 mt-1">
           Upload and manage your medical documents securely
         </p>
       </div>
 
       {/* Upload Card */}
-      <div className="border-2 border-dashed rounded-xl p-6 flex items-center justify-between bg-primary-50">
+      <div
+        className="
+          border-2 border-dashed
+          border-slate-200 dark:border-slate-600
+          rounded-xl p-6
+          flex items-center justify-between
+          bg-primary-50 dark:bg-slate-700/50
+        "
+      >
         <div>
-          <h3 className="font-medium text-gray-800">Upload New Record</h3>
-          <p className="text-sm text-gray-500 mt-1">Upload your medical documents securely</p>
+          <h3 className="font-medium text-gray-800 dark:text-slate-100">Upload New Record</h3>
+          <p className="text-sm text-gray-500 dark:text-slate-400 mt-1">
+            Upload your medical documents securely
+          </p>
         </div>
 
-        <button className="bg-primary text-white px-6 py-2 rounded-lg hover:opacity-90 transition">
+        <button
+          className="
+            bg-primary text-white
+            px-6 py-2 rounded-lg
+            hover:opacity-90 transition
+          "
+        >
           Upload Record
         </button>
       </div>
@@ -61,7 +86,13 @@ export default function MedicalRecords() {
       </div>
 
       {/* Load More */}
-      <button className="w-full bg-primary text-white py-3 rounded-lg hover:opacity-90 transition">
+      <button
+        className="
+          w-full bg-primary text-white
+          py-3 rounded-lg
+          hover:opacity-90 transition
+        "
+      >
         Load More Records
       </button>
     </div>

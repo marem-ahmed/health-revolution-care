@@ -15,13 +15,9 @@ export default function MedicalInfo() {
 
       <button
         className="
-          mt-6
-          w-full
-          bg-primary
-          text-white
-          py-3
-          rounded-lg
-          font-medium
+          mt-6 w-full
+          bg-primary text-white
+          py-3 rounded-lg font-medium
           hover:opacity-90
           active:scale-[0.98]
           transition
