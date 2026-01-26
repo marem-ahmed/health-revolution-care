@@ -14,7 +14,7 @@ export default function Doctors() {
     >
       {/* Navigation / Breadcrumb */}
       <div className="flex items-center gap-3 text-sm text-accent dark:text-slate-400">
-        <button onClick={() => navigate( "/home")} className="hover:underline">
+        <button onClick={() => navigate("/home")} className="hover:underline">
           ← Back
         </button>
         <span>/</span>
