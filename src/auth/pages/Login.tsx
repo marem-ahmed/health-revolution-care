@@ -10,7 +10,7 @@ export default function Login() {
   };
   return (
     <>
-      <div className="flex justify-center mb-4">
+      <div className="flex justify-center">
         <img src="/assets/logo.png" alt="Health Connect" className="size-40" />
       </div>
 
@@ -20,7 +20,7 @@ export default function Login() {
       <p className="text-lg font-medium text-center my-5 text-gray-500 flex justify-center items-center gap-2">
         or login using your QR code <LuScanLine />
       </p>
-      <p className="text-lg font-semibold text-center mt-8 text-gray-500">
+      <p className="text-lg font-semibold text-center text-gray-500">
         Don’t have an account?{" "}
         <span onClick={handleNavigation} className="text-primary cursor-pointer">
           Create one
