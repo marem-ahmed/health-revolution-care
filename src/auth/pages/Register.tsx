@@ -13,7 +13,7 @@ export default function Register() {
         <img src="/assets/logo.png" alt="Health Connect" className="size-40" />
       </div>
 
-      <h1 className="text-2xl font-bold text-center mb-6 text-primary">Create your account</h1>
+      <h1 className="text-2xl font-bold text-center mb-2 text-primary">Create your account</h1>
 
       <RegisterForm />
 
